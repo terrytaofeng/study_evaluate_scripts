@@ -1,8 +1,11 @@
 
 
+## install linux (ubuntu or centos)
+
 ## copy files
 
 ## enable cgi for apache
+* http://askubuntu.com/questions/403067/cgi-bin-not-working
 
 ## install graphviz(dot)
 
