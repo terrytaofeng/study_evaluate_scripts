@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+   <title>bookmark.mm</title>
+   <script type="text/javascript" src="./flashviewer/flashobject.js"> </script>
+</head>
+<body>
+
+
+<div>
+<div id="flashcontent" style="width:600px;height:300px">
+     Flash plugin or Javascript are turned off.
+     Activate both  and reload to view the mindmap
+</div>
+</div>
+
+
+<script type="text/javascript">
+		var fo = new FlashObject("./flashviewer/visorFreemind.swf", "", "100%", "100%", 6, "#9999ff");
+		fo.addParam("quality", "high");
+		fo.addParam("bgcolor", "#ffffff");
+		fo.addVariable("openUrl", "http://127.0.0.1/data/git/analysis2/freemind/language_selection.mm");
+		fo.addVariable("initLoadFile", "http://127.0.0.1/data/git/analysis2/freemind/language_selection.mm");
+		fo.addVariable("startCollapsedToLevel","5");
+		fo.write("flashcontent");
+</script>
+</body>
+
+
+</html>
