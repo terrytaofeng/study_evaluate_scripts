@@ -9,11 +9,11 @@
 
 ## install graphviz(dot)
 
-## create dot file at /var/www/html/gitmap/
+## create dot file at /var/www/html/data/gitmap/
 
-## enable writeable for /var/www/html/loginfo/
+## enable writeable for /var/www/html/data/loginfo/
 
-* chmod og+rw /var/www/html/loginfo/
+* chmod og+rw /var/www/html/data/loginfo/
 
 ## app
 
