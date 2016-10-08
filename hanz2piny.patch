@@ -1,0 +1,34 @@
+diff --git a/src/main.cpp b/src/main.cpp
+index 398f11e..de65e23 100644
+--- a/src/main.cpp
++++ b/src/main.cpp
+@@ -125,28 +125,13 @@ main (int argc, char* argv[])
+     cmdline_arguments_list = cmdline_options.getArgumentsList("--replace-unknown-with");
+     const string replace_unknown_with = (cmdline_arguments_list.empty() ? "" : cmdline_arguments_list[0]);
+ 
+-    // --path
+-    cmdline_arguments_list = cmdline_options.getArgumentsList("--path");
+-    if (cmdline_arguments_list.empty()) {
+-        cerr << "ERROR! there is no --path, more info see --help. " << endl;
+-        exit(EXIT_FAILURE);
+-    }
+-    const string file_path = cmdline_arguments_list[0];
+-
+     // <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+     const Hanz2Piny hanz2piny;
+-    if (!hanz2piny.isUtf8File(file_path)) {
+-        cerr << "ERROR! fail to open UTF-8 encoding file " << file_path
+-             << ". make sure the file is exist and the encoding is UTF-8. "
+-             << endl;
+-        exit(EXIT_FAILURE);
+-    }
+     
+-    ifstream utf8_ifs(file_path);
+     string line;
+-    while (getline(utf8_ifs, line)) {
++    while (getline(std::cin, line)) {
+         // 去掉 BOM 头
+         if (hanz2piny.isStartWithBom(line)) {
+             line = string(line.cbegin() + 3, line.cend());
